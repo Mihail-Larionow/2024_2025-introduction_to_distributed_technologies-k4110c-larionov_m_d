@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: itdt-contained-frontend
+  labels:
+    name: itdt-contained-frontend
+spec:
+  selector:
+    matchLabels:
+      app: itdt-contained-frontend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: itdt-contained-frontend
+    spec:
+      containers:
+        - name: itdt-contained-frontend
+          image: ifilyaninitmo/itdt-contained-frontend:master
+          env:
+            - name: REACT_APP_USERNAME
+              value: Mikhail Larionov
+            - name: REACT_APP_COMPANY_NAME
+              value: ITMO
