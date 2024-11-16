@@ -51,7 +51,7 @@ spec:
 minikube kubectl -- apply -f itdt-contained-frontend.yml
 ```
 
-<p align="center"><img src=""/></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/4854683f-56da-449e-aa6e-2ea8523ae5af"/></p>
 
 Для доступа к получившимся подам напишем конфигурацию сервиса:
 
@@ -80,27 +80,27 @@ spec:
 minikube kubectl -- create -f itdt-contained-frontend-service.yml
 ```
 
-В браузере откроем две вкладки, в каждом из которых введем _ip_-адрес нашего кластера, а также порт, указанный в сервисе.
+В браузере откроем две вкладки, в каждом из которых введем _ip_-адрес нашего кластера, а также внешний порт сервиса.
 
 Первая вкладка:
 
-<p align="center"><img src=""/></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/e1dd530c-3d08-4419-8930-4971263eb310"/></p>
 
-Вторая вкладка: 
+Вторая вкладка:
 
-<p align="center"><img src=""/></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/25dbae24-a8f1-41ca-9354-c14cb547b945"/></p>
 
 Мы видим, что переменные `REACT_APP_USERNAME` и `REACT_APP_COMPANY_NAME` в контейнерах совпадают, однако их имена и _ip_-адреса различны. Так происходит, потому что **LoadBalancer** старается равномерно распределять нагрузку на поды.
 
-Убедимся в этом, посмотре на логи каждого из них.
+Также посмотрим логи каждого из них.
 
 Первый под:
 
-<p align="center"><img src=""/></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/34121e5c-2adb-4b6e-88fc-fbf461413f07"/></p>
 
 Второй под:
 
-<p align="center"><img src=""/></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/70f36d93-9584-46c7-a3c1-4e899d680189"/></p>
 
 ## Вывод
 
@@ -108,5 +108,5 @@ minikube kubectl -- create -f itdt-contained-frontend-service.yml
 
 ## Схема организации контейнеров и сервисов
 
-<p align="center"><img src=""/></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/d59e8972-e151-4397-8b10-536bab95fb6d"/></p>
 
